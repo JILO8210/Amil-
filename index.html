@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080914">
+<title>العميل — خدمات رقمية</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+:root{--bg:#070811;--card:#101221;--text:#f7f7fb;--muted:#9b9dae;--purple:#8b5cf6;--cyan:#22d3ee;--line:#ffffff12}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Cairo,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.5;background:radial-gradient(circle at 85% 10%,#6d28d933,transparent 28%),radial-gradient(circle at 5% 80%,#0891b233,transparent 25%)}
+a{color:inherit;text-decoration:none}.container{width:min(1120px,calc(100% - 32px));margin:auto}
+header{height:76px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:20}
+.logo{font-size:25px;font-weight:900}.logo i{color:var(--purple);font-style:normal}
+nav{display:flex;gap:28px;color:#aaaabd;font-size:13px}nav a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;padding:12px 18px;font-weight:800;font-size:13px;transition:.25s;border:1px solid var(--line)}
+.btn.primary{background:linear-gradient(135deg,#8b5cf6,#5b5cf6);box-shadow:0 12px 35px #6d28d933;border:0}.btn:hover{transform:translateY(-3px)}
+.hero{min-height:680px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:45px;padding:55px 0 90px}
+.badge{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border:1px solid #ffffff15;background:#ffffff07;border-radius:99px;color:#bbbccd;font-size:11px}.dot{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 6px #22c55e18}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.12;letter-spacing:-3px;margin:22px 0}h1 em,h2 em{font-style:normal;background:linear-gradient(90deg,#b794ff,#22d3ee);-webkit-background-clip:text;color:transparent}
+.hero p{color:var(--muted);line-height:2;font-size:15px;max-width:570px}.actions{display:flex;gap:10px;margin-top:28px}.stats{display:flex;gap:24px;margin-top:30px;color:#88899a;font-size:11px}.stats b{color:#fff;font-size:18px;display:block;margin-bottom:2px}
+.scene{height:500px;position:relative;display:grid;place-items:center}.glow{position:absolute;width:280px;height:280px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,#06b6d4);filter:blur(85px);opacity:.25}
+.device{position:relative;width:min(430px,92%);height:335px;padding:13px;border:1px solid #ffffff17;background:#111321dd;border-radius:25px;box-shadow:0 35px 100px #0009;transform:rotate(-4deg);animation:levitate 5s ease-in-out infinite;z-index:3}
+@keyframes levitate{50%{transform:rotate(-2deg) translateY(-13px)}}
+.screen{height:100%;border-radius:17px;background:#080a13;overflow:hidden;border:1px solid #ffffff0b}.bar{height:38px;display:flex;align-items:center;padding:0 13px;gap:6px;border-bottom:1px solid #ffffff0a}.bar i{width:7px;height:7px;border-radius:50%;background:#3a3c4d}.art{height:190px;position:relative;overflow:hidden;background:linear-gradient(135deg,#20124b,#062f40)}
+.art:before,.art:after{content:"";position:absolute;border-radius:50%;filter:blur(2px)}.art:before{width:210px;height:210px;background:#8b5cf6;right:-40px;top:-90px;opacity:.55;animation:blob 6s infinite alternate}.art:after{width:160px;height:160px;background:#22d3ee;left:-45px;bottom:-80px;opacity:.5;animation:blob 5s infinite alternate-reverse}
+@keyframes blob{to{transform:translate(35px,20px) scale(1.18)}}.art .play{position:absolute;inset:0;display:grid;place-items:center;font-size:34px;z-index:2}.art .play span{width:72px;height:72px;border:1px solid #ffffff2c;background:#ffffff12;backdrop-filter:blur(10px);border-radius:50%;display:grid;place-items:center}
+.timeline{display:flex;gap:7px;padding:13px}.timeline span{height:9px;border-radius:99px;background:#25273a;flex:1}.timeline span:nth-child(1){flex:2;background:#7c3aed}.timeline span:nth-child(3){background:#0891b2}
+.floating{position:absolute;z-index:5;display:flex;align-items:center;gap:10px;padding:11px 13px;border:1px solid #ffffff14;background:#121426ee;border-radius:15px;box-shadow:0 20px 45px #0007;backdrop-filter:blur(12px);font-size:11px}.floating strong{font-size:22px}.floating small{display:block;color:#77798a;font-size:9px}.f1{top:75px;right:-5px;animation:float 4s infinite}.f2{bottom:65px;left:0;animation:float 4.5s infinite .7s}@keyframes float{50%{transform:translateY(-10px)}}
+.marquee{overflow:hidden;border-block:1px solid var(--line);background:#0b0c15}.track{width:max-content;display:flex;gap:25px;padding:16px 0;color:#76788a;font-size:12px;animation:move 22s linear infinite}.track b{color:var(--purple)}@keyframes move{to{transform:translateX(50%)}}
+section{padding:95px 0}.head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:35px}.eyebrow{color:#a78bfa;font-size:11px;font-weight:900;letter-spacing:2px}.head h2{font-size:39px;line-height:1.25;margin:9px 0}.head p{color:#77798a;max-width:350px;font-size:12px;line-height:1.9}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service{min-height:315px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#111321,#0b0c14);padding:23px;position:relative;overflow:hidden;transition:.3s}.service:hover{transform:translateY(-8px);border-color:#8b5cf655;box-shadow:0 25px 55px #0007}.service:after{content:"";position:absolute;width:120px;height:120px;background:#8b5cf6;filter:blur(70px);opacity:0;right:-50px;top:-50px;transition:.3s}.service:hover:after{opacity:.25}.ico{font-size:30px}.num{position:absolute;left:20px;top:25px;color:#454658;font-size:10px}.service h3{margin:24px 0 8px;font-size:18px}.service p{color:#77798a;font-size:11px;line-height:2;min-height:72px}.service a{color:#a78bfa;font-size:11px;font-weight:800;position:absolute;bottom:22px;right:23px}
+.portfolio{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:14px}.project{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#0e0f19;transition:.3s}.project:hover{transform:translateY(-6px)}.picture{height:285px;position:relative;overflow:hidden}.big .picture{height:355px}.p1{background:linear-gradient(135deg,#32136b,#073e52)}.p2{background:linear-gradient(135deg,#052d3b,#33104c)}.p3{background:radial-gradient(circle at 50% 40%,#7c3aed,#111225 58%)}.picture:before{content:"";position:absolute;width:170px;height:170px;border-radius:50%;background:#22d3ee;filter:blur(60px);opacity:.35;right:-30px;top:-35px;animation:blob 6s infinite alternate}.picture:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,#0009)}.label{padding:13px 16px;color:#aaaabd;font-size:11px}.mocktext{position:absolute;z-index:2;inset:0;display:grid;place-items:center;font-size:28px;font-weight:900;text-align:center;transform:rotate(-5deg)}.mockplay{position:absolute;z-index:2;left:25px;bottom:25px;width:50px;height:50px;border:1px solid #ffffff25;background:#ffffff12;border-radius:50%;display:grid;place-items:center}
+.cta{border:1px solid var(--line);border-radius:28px;background:linear-gradient(120deg,#111323,#0b0c13);padding:60px;position:relative;overflow:hidden}.cta:after{content:"";position:absolute;width:300px;height:300px;background:#22d3ee;filter:blur(120px);opacity:.08;left:-100px;bottom:-180px}.cta h2{font-size:46px;line-height:1.2;margin:10px 0}.cta p{color:#858697;max-width:520px;font-size:13px;line-height:2;margin-bottom:25px}
+footer{border-top:1px solid var(--line);padding:35px 0 95px;color:#656778;font-size:10px;display:flex;justify-content:space-between;align-items:center}.social{display:flex;gap:8px}.social a{width:36px;height:36px;border:1px solid var(--line);border-radius:10px;display:grid;place-items:center;color:#aaaabd;font-size:9px}
+.support{position:fixed;bottom:18px;left:18px;z-index:50;background:#16a34a;border-radius:999px;padding:12px 17px;box-shadow:0 15px 40px #0009;display:flex;gap:8px;align-items:center;font-size:11px;font-weight:900;animation:ring 2.5s infinite}@keyframes ring{50%{box-shadow:0 15px 40px #0009,0 0 0 8px #22c55e18}}
+.reveal{opacity:0;transform:translateY(22px);transition:.8s}.reveal.show{opacity:1;transform:none}
+@media(max-width:900px){nav{display:none}.hero{grid-template-columns:1fr;text-align:center;padding-top:35px}.hero p{margin-inline:auto}.actions,.stats{justify-content:center}.scene{height:430px}.services{grid-template-columns:1fr 1fr}.portfolio{grid-template-columns:1fr 1fr}.big{grid-column:1/-1}.big .picture{height:300px}.head{flex-direction:column;align-items:flex-start}}
+@media(max-width:600px){.container{width:min(100% - 24px,1120px)}header{height:68px}.nav-cta{display:none}.hero{min-height:auto;padding:55px 0 65px}.hero h1{font-size:43px;letter-spacing:-2px}.hero p{font-size:12px}.actions{flex-direction:column}.actions .btn{width:100%}.stats{gap:15px;flex-wrap:wrap}.scene{height:370px}.device{height:265px;width:96%}.art{height:145px}.floating{transform:scale(.82)}.f1{right:-17px}.f2{left:-17px}section{padding:70px 0}.head h2{font-size:30px}.services,.portfolio{grid-template-columns:1fr}.big{grid-column:auto}.picture,.big .picture{height:260px}.cta{padding:35px 22px}.cta h2{font-size:37px}.support b{display:none}.support{width:49px;height:49px;justify-content:center;padding:0}footer{flex-direction:column;gap:18px;text-align:center;padding-bottom:90px}}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<a class="logo" href="#">العميل <i>✦</i></a>
+<nav><a href="#services">الخدمات</a><a href="#portfolio">أعمالنا</a><a href="#contact">تواصل</a></nav>
+<a class="btn primary nav-cta" target="_blank" href="https://wa.me/213798510272?text=السلام%20عليكم،%20أريد%20الاستفسار%20عن%20خدمات%20العميل.">اطلب الآن</a>
+</header>
+
+<main>
+<section class="hero">
+<div class="reveal">
+<div class="badge"><span class="dot"></span> خدمات رقمية بإبداع وذكاء</div>
+<h1>فكرتك تستحق<br><em>محتوى مختلف.</em></h1>
+<p>نحوّل أفكارك إلى فيديوهات وتصاميم وحلول ذكية تساعدك على الظهور بشكل أقوى على الإنترنت.</p>
+<div class="actions"><a class="btn primary" href="#services">اكتشف خدماتنا ←</a><a class="btn" href="#portfolio">شاهد أعمالنا</a></div>
+<div class="stats"><div><b>⚡</b>تنفيذ سريع</div><div><b>✦</b>تصميم مميز</div><div><b>🤖</b>حلول ذكية</div></div>
+</div>
+<div class="scene reveal">
+<div class="glow"></div>
+<div class="floating f1"><strong>🎬</strong><div><b>Video Editing</b><small>Reels • Shorts • Ads</small></div></div>
+<div class="floating f2"><strong>🤖</strong><div><b>Automation</b><small>Smart workflows</small></div></div>
+<div class="device"><div class="screen"><div class="bar"><i></i><i></i><i></i></div><div class="art"><div class="play"><span>▶</span></div></div><div class="timeline"><span></span><span></span><span></span><span></span></div></div></div>
+</div>
+</section>
+
+<div class="marquee"><div class="track"><span>مونتاج فيديو</span><b>✦</b><span>تصميم صور مصغرة</span><b>✦</b><span>أتمتة</span><b>✦</b><span>ذكاء اصطناعي</span><b>✦</b><span>مونتاج فيديو</span><b>✦</b><span>تصميم</span><b>✦</b><span>أتمتة</span></div></div>
+
+<section id="services">
+<div class="head reveal"><div><span class="eyebrow">الخدمات</span><h2>كل ما تحتاجه في <em>مكان واحد.</em></h2></div><p>اختر الخدمة المناسبة لك واضغط على طلب الخدمة للتواصل معنا مباشرة.</p></div>
+<div class="services">
+<article class="service reveal"><div class="ico">🎬</div><span class="num">01</span><h3>مونتاج الفيديو</h3><p>Reels وShorts وفيديوهات عادية وترويجية بمظهر جذاب.</p><a target="_blank" href="https://wa.me/213798510272?text=السلام%20عليكم،%20أريد%20خدمة%20مونتاج%20الفيديو.">اطلب الخدمة ←</a></article>
+<article class="service reveal"><div class="ico">🖼️</div><span class="num">02</span><h3>الصور المصغرة</h3><p>صور Thumbnail جذابة لليوتيوب والسوشيال ميديا.</p><a target="_blank" href="https://wa.me/213798510272?text=السلام%20عليكم،%20أريد%20تصميم%20صورة%20مصغرة.">اطلب الخدمة ←</a></article>
+<article class="service reveal"><div class="ico">🤖</div><span class="num">03</span><h3>الأتمتة</h3><p>حلول ذكية تساعدك على تقليل المهام المتكررة وتنظيم العمل.</p><a target="_blank" href="https://wa.me/213798510272?text=السلام%20عليكم،%20أريد%20الاستفسار%20عن%20الأتمتة.">اطلب الخدمة ←</a></article>
+<article class="service reveal"><div class="ico">✨</div><span class="num">04</span><h3>الذكاء الاصطناعي</h3><p>صور ومحتوى بصري وأفكار إبداعية لمشاريعك وإعلاناتك.</p><a target="_blank" href="https://wa.me/213798510272?text=السلام%20عليكم،%20أريد%20خدمة%20بالذكاء%20الاصطناعي.">اطلب الخدمة ←</a></article>
+</div>
+</section>
+
+<section id="portfolio">
+<div class="head reveal"><div><span class="eyebrow">الأعمال</span><h2>شاهد <em>ما يمكننا صنعه.</em></h2></div><p>هذه نماذج بصرية مؤقتة. لاحقًا نستبدلها بأعمالك الحقيقية.</p></div>
+<div class="portfolio">
+<div class="project big reveal"><div class="picture p1"><div class="mockplay">▶</div><div class="mocktext">VIDEO<br><small>AD • REELS • SHORTS</small></div></div><div class="label">مونتاج فيديو إعلاني</div></div>
+<div class="project reveal"><div class="picture p2"><div class="mocktext">YOUR<br>THUMBNAIL</div></div><div class="label">تصميم صورة مصغرة</div></div>
+<div class="project reveal"><div class="picture p3"><div class="mocktext">✦ AI<br><small>CREATIVE</small></div></div><div class="label">تصميم بالذكاء الاصطناعي</div></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="cta reveal"><span class="eyebrow">جاهز نبدأ؟</span><h2>خلينا نحول<br><em>فكرتك إلى واقع.</em></h2><p>أرسل لنا فكرتك، نوع الخدمة، وما تحتاجه بالضبط. سنتواصل معك مباشرة.</p><a class="btn primary" target="_blank" href="https://wa.me/213798510272?text=السلام%20عليكم،%20أريد%20بدء%20مشروعي%20مع%20العميل.">تواصل عبر WhatsApp ←</a></div>
+</section>
+</main>
+
+<footer>
+<div class="logo">العميل <i>✦</i></div>
+<div>خدمات رقمية بإبداع وذكاء</div>
+<div class="social"><a target="_blank" href="https://wa.me/213798510272">WA</a><a target="_blank" href="https://t.me/A_milok">TG</a></div>
+</footer>
+</div>
+<a class="support" target="_blank" href="https://wa.me/213798510272?text=السلام%20عليكم،%20أحتاج%20مساعدة%20من%20الدعم.">💬 <b>الدعم</b></a>
+<script>
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');obs.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));
+</script>
+</body>
+</html>
